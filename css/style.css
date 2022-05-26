@@ -1,0 +1,136 @@
+* {margin:0; padding:0; box-sizing: border-box; }
+ul,ol,li {list-style:none; }
+a {text-decoration: none;}
+img,video {vertical-align:top; }
+table {border-collapse: collapse; }
+input,select,textarea {outline:0; }
+textarea {resize:none; }
+body {font-size:13px; line-height:1; font-family: 'Gowun Dodum', sans-serif; overflow-x:hidden; }
+
+#headerWrap {position:absolute; left:0; top:0; width:100%; display:flex; justify-content:end; z-index:1; }
+#headerWrap .gnb {display:flex; margin-right:3%;}
+#headerWrap .gnb li a {display:inline-block; line-height:80px; margin:0 20px; color:#8aaaa9; 
+                       font-family: 'Raleway', sans-serif; font-size:16px; }
+#headerWrap .gnb li.on a {color:#6f9796; font-weight:500; text-decoration:underline; transition:all 0.3s;}
+#headerWrap .gnb li:hover a {color:#6f9796; font-weight:500; text-decoration:underline; }
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:700');
+#main {margin: 0; padding: 0; width: 100vw; height: 100vh; overflow: hidden;
+      position: relative; background: #feefc5; display: flex; align-items: center; }
+
+#main h1 {color: white; font-size: 18vmin; line-height: 1; font-weight: bold;  letter-spacing: 2px; font-family: 'Raleway', sans-serif;
+   text-transform: uppercase; padding-left: 40px; position:relative;  }
+
+#main .blob {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: #93d5d3;
+  width: 50vmax;
+  animation: move 10s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes move {
+  0%   { transform: scale(1)   translate(10px, -30px); }
+  38%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+  40%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+  78%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+  80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+  100% { transform: scale(1)   translate(10px, -30px); }
+}
+
+#main .scBtn {cursor:pointer;}
+#main .scBtn p,#arrow {position:absolute; bottom:40px; left:50%; transform:translateX(-50%); 
+                  color:#fff; font-size:30px;}
+#main .scBtn p {font-size:17px; bottom:55px; font-weight:600;}
+#main .scBtn #arrow {animation-name:scrollMover; 
+                animation-duration: 2s; animation-timing-function:linear; 
+                animation-iteration-count: infinite; }
+@keyframes scrollMover {
+  0% {bottom:40px; opacity:1;}
+  100% {bottom:20px; opacity:0;}
+}
+
+.aboutMe {display:flex; align-items: center; height:100vh; }
+.aboutMe .menuBox {width:30%; height:100vh; background:rgba(198,208,208,0.5); }
+.aboutMe .innerBox {width:70%; }
+.aboutMe .innerBox .info1 {text-align:center; height:50vh; padding:15px 0;}
+.aboutMe .innerBox .info1 .face {width:120px; height:120px; border-radius:50%; border:1px solid #c7c7c7; 
+                                 margin:20px auto; overflow:hidden;}   
+.aboutMe .innerBox .info1 .face img {width:100%;}
+.aboutMe .innerBox .info1 > div {margin-bottom:30px; }      
+.aboutMe .innerBox .info1 h3 {color:#6f9796; font-family: 'Raleway', sans-serif; font-weight:500; margin-bottom:15px; }             
+.aboutMe .innerBox .info1 p {color:#8d8d8d; font-size:14px; line-height:17px;}
+.aboutMe .innerBox .info2 { background:#fffef1;  height:50vh; display:flex; justify-content:center; align-items:center; flex-direction:column; }
+.aboutMe .innerBox .info2 h3 {text-align: center; font-family: 'Raleway', sans-serif; font-weight:500; margin-bottom:50px; color:#555;}
+
+.circles {width:800px; margin:0 auto; display:flex; justify-content:space-between;}
+.circle {width:160px; height:160px; border-radius: 50%; padding:20px; background: #f7f6e9; position: relative;}
+.circle .inner {width:100%; height:100%; border-radius:50%; background:#fffae7; position:relative;}
+.circle .inner .count {position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-size:14px; font-weight:500; }
+.circle svg {position:absolute; left:0; top:0; }
+.circle svg circle {fill:transparent; stroke-width:20px; stroke:url(#GradientColor); stroke-dashoffset: 440; stroke-dasharray: 440; 
+                    transition:all 0.5s;}
+.circle.on:nth-child(1) svg circle {stroke-dashoffset: 25;}
+.circle.on:nth-child(2) svg circle {stroke-dashoffset: 44;}
+.circle.on:nth-child(3) svg circle {stroke-dashoffset: 132;}
+.circle.on:nth-child(4) svg circle {stroke-dashoffset: 176;}
+.portfolio {height:100vh; display:flex; justify-content:end; }
+.portfolio .innerBox {width:80%; background:rgba(198,208,208,0.15); display:flex; flex-wrap:wrap; justify-content:space-around; }
+.portfolio .innerBox > div {width:32%; margin:0% 4%; }
+.portfolio .innerBox > div:nth-child(3) {width:35%; }
+.portfolio .innerBox > div:nth-child(3) > div {display: flex; }
+.portfolio .innerBox > div:nth-child(3) > div img {width:100%;}
+.portfolio .innerBox > div h3 {margin:15px 0;}
+.portfolio .innerBox > div .screen {position:relative; }
+.portfolio .innerBox > div .screen a {display:block; height:100%; }
+.portfolio .innerBox > div .screen img {width:90%; transition:all 0.5s; }
+.portfolio .innerBox > div .screen .hovicon {width:90px; height:90px; border-radius:50%; border:1px solid #fff; text-align: center; 
+                                             line-height:90px; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); 
+                                             color:#fff; font-weight:bold; font-size:15px; opacity:0; transition:all 0.5s; z-index:10;
+                                             animation:clickBtn 1s infinite; box-shadow:0 0 0 0 rgba(235,166,65,0.5); font-size:19px; }
+.portfolio .innerBox > div .screen a:hover .hovicon {opacity:1; }
+.portfolio .innerBox > div .screen a:hover img {-webkit-filter:blur(3px);}
+.portfolio .innerBox > div .txt {padding-left:40px; padding-top:15px;}
+.portfolio .innerBox > div .txt h4 {margin-bottom:30px; border-bottom:2px solid #6f9796; font-family: 'Raleway', sans-serif; font-weight:500;
+                                    padding-bottom:5px; padding-left:8px; width:200px; color:#555; }
+.portfolio .innerBox > div .txt p {font-size:15px; line-height:22px; margin-bottom:7px;}
+.portfolio .innerBox > div .txt p i {margin-right:5px; }
+
+.pagerWrap {width:30%; height:100vh; position:fixed; left:0; top:0; }
+.pagerWrap .logo {width:80px; height:80px; margin-left:50px;}
+.pagerWrap .logo a {display:block; height:100%;}
+.pagerWrap .logo img {width:100%; }
+.pagerWrap .pager {position:absolute; left:5px; top:50%; transform:translateY(-50%); opacity:0; transition:all 0.3s;}
+.pagerWrap .pager li a {display:block; color:#8e8e8e; font-size:20px; padding:15px 20px; width:200px; transition:all 0.3s;
+                        border-bottom:1px solid #8e8e8e; margin-bottom:15px; font-family: 'Raleway', sans-serif; font-weight:500; }
+.pagerWrap .pager li a .bi {color:#7faaa9; position:static; margin-right:15px; opacity:0; transition:all 0.1s; }
+.pagerWrap .pager li.on a {font-weight: 800; font-size:22px; border-bottom:1.5px solid #7faaa9; color:#7faaa9; width:230px;}
+.pagerWrap .pager li.on a .bi {opacity:1; }
+.pagerWrap .pager.on {opacity:1; }
+
+@keyframes clickBtn{
+  0% {box-shadow:0 0 0 0 rgba(255,191,171,0.4);}
+  70% {box-shadow:0 0 0 30px rgba(255,191,171,0);}
+  100% {box-shadow:0 0 0 0 rgba(255,191,171,0);}
+}
+
+.contact {display:flex; height:100vh; }
+.contact .menuBox {width:30%; background:#f8fdfd; }
+.contact .innerBox {width:70%; display:flex; }
+.contact .innerBox img {width:58%; }
+.contact .innerBox .txt {margin:auto 20px; position:relative; padding:40px;}
+.contact .innerBox .txt .round {width:15px; height:15px; position:absolute; background:#f7bd69; 
+                                left:0; top:0; border-radius:50%; animation:circleMove 7s 1s infinite; opacity:0;}
+.contact .innerBox .txt h3 {font-size:20px; color:#555; }
+.contact .innerBox .txt .name {margin-bottom:40px; font-size:22px; font-weight:bold; text-decoration: underline;}
+.contact .innerBox .txt p {font-size:15px; color:#999; margin-bottom:40px; }
+
+@keyframes circleMove{
+  0% {opacity:0; left:0; top:0; }
+  25% {opacity:1; left:100%; top:0; }
+  50% {opacity:1; left:100%; top:100%; }
+  75% {opacity:1; left:0; top:100%; }
+  100% {opacity:1; left:0; top:0; }
+}
