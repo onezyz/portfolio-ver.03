@@ -71,7 +71,7 @@ body {font-size:13px; line-height:1; font-family: 'Gowun Dodum', sans-serif; ove
 .circle .inner .count {position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-size:14px; font-weight:500; }
 .circle svg {position:absolute; left:0; top:0; }
 .circle svg circle {fill:transparent; stroke-width:20px; stroke:url(#GradientColor); stroke-dashoffset: 440; stroke-dasharray: 440; 
-                    transition:all 0.5s;}
+                    transition:all 1.5s;}
 .circle.on:nth-child(1) svg circle {stroke-dashoffset: 25;}
 .circle.on:nth-child(2) svg circle {stroke-dashoffset: 44;}
 .circle.on:nth-child(3) svg circle {stroke-dashoffset: 132;}
@@ -82,8 +82,11 @@ body {font-size:13px; line-height:1; font-family: 'Gowun Dodum', sans-serif; ove
 .portfolio .innerBox > div:nth-child(3) {width:35%; }
 .portfolio .innerBox > div:nth-child(3) > div {display: flex; }
 .portfolio .innerBox > div:nth-child(3) > div img {width:100%;}
+.portfolio .innerBox > div:nth-child(4) {width:35%; }
+.portfolio .innerBox > div:nth-child(4) > div {display: flex; }
+.portfolio .innerBox > div:nth-child(4) > div img {width:100%;}
 .portfolio .innerBox > div h3 {margin:15px 0;}
-.portfolio .innerBox > div .screen {position:relative; }
+.portfolio .innerBox > div .screen {position:relative; } 
 .portfolio .innerBox > div .screen a {display:block; height:100%; }
 .portfolio .innerBox > div .screen img {width:90%; transition:all 0.5s; }
 .portfolio .innerBox > div .screen .hovicon {width:90px; height:90px; border-radius:50%; border:1px solid #fff; text-align: center; 
